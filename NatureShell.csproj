@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Core\NatureShell.Core.csproj" />
+    <ProjectReference Include="Models\NatureShell.Models.csproj" />
+    <ProjectReference Include="Engine\NatureShell.Engine.csproj" />
+    <ProjectReference Include="Commands\NatureShell.Commands.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Engine\**" />
+    <Compile Remove="Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Core\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Engine\**" />
+    <EmbeddedResource Remove="Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Core\**" />
+    <None Remove="Models\**" />
+    <None Remove="Engine\**" />
+    <None Remove="Commands\**" />
+  </ItemGroup>
+
+</Project>
